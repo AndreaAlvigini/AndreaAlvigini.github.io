@@ -38,8 +38,17 @@ body {
 .bg-custom-secondary {
     background-color: var(--main-blue);
 }
+#about, #frontend, #backend, #database, #contacts {
+    padding-top: 80px;
+}
+
 
 /* NAVBAR */
+.navbar.fixed-top {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
 
 
 .navbar-nav {
@@ -188,8 +197,11 @@ body {
     #contacts {
         width: 30em;
         margin: auto;
+        padding-top: 100px;
     }
-
+    #about, #frontend, #backend, #database, {
+    padding-top: 100px;
+    }
 }
 
 @media screen and (max-width: 400px) {
