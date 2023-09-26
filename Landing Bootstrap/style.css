@@ -40,6 +40,7 @@ body {
 }
 #about, #frontend, #backend, #database, #contacts {
     padding-top: 80px;
+
 }
 
 
@@ -94,9 +95,8 @@ body {
 /*JUMBOTRON*/
 
 .jumbotron {
-    /* height: 40vh; */
+    height: 40vh;
     text-align: center;
-
 }
 
 .display-4 {
@@ -192,6 +192,12 @@ body {
     justify-content: center;
     align-items: center;
 }
+#contacts {
+    padding-bottom: 50px;
+
+}
+
+/* Media query*/
 
 @media screen and (min-width: 767px) {
     #contacts {
@@ -199,7 +205,7 @@ body {
         margin: auto;
         padding-top: 100px;
     }
-    #about, #frontend, #backend, #database, {
+    #about, #frontend, #backend, #database {
     padding-top: 100px;
     }
 }
@@ -209,4 +215,12 @@ body {
         font-size: 3em;
     }
 
+}
+@media screen and (max-width: 991px) {
+    #contacts {
+        width: 30em;
+        margin: auto;
+        padding-top: 150px;
+        
+    }
 }
