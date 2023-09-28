@@ -118,19 +118,23 @@ body {
     transition: color 0.2s ease-in-out;
 }
 
-/* .navbar-toggler {
-    border-color: var(--main-white);
+.navbar-toggler {
+    background-color: var(--main-white);
     font-weight: 100;
     font-weight:lighter;
-}
+} 
 
 .navbar-toggler-icon {
     background-color: var(--main-white);
     font-weight:lighter;
-} */
+} 
 
 .fa-bars {
     background-color: var(--main-white);
+}
+.navbar-collapse .show {
+    background-color: var(--main-white);
+    color: var(--main-black);
 }
 
 /*JUMBOTRON*/
@@ -366,11 +370,19 @@ body {
         padding-top: 50px;
     }
 }
-@media screen and (max-width: 576) {
-    .hamburger{
-        background-color: var(--main-white);
-        color: var(--main-white);
-        
+@media (max-width: 576px) {
+    /* Cambia lo sfondo del navbar a bianco */
+    .navbar {
+        background-color: var(--main-white) !important;
     }
-    
+
+    /* Cambia il colore del testo dei link nel navbar a nero */
+    .navbar-nav .nav-link {
+        color: var(--main-black) !important;
+    }
+
+    /* Cambia il colore dell'icona del toggle a nero */
+    .navbar-toggler-icon {
+        background-color: var(--main-white) !important;
+    }
 }

@@ -16,6 +16,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
     function viewportWidthCustom(customWidth) {
         let viewport = window.innerWidth;
         if (viewport < customWidth) {
+            // console.log(viewport + "TEST");
             const navbarToggler = document.getElementById("navbar-toggler");
             // Seleziona tutti i link del menu
             const menuLinks = document.querySelectorAll(".navbar-nav .nav-link");
@@ -59,11 +60,10 @@ window.addEventListener("DOMContentLoaded", (event) => {
     }
     navBarTransition();
 
-    window.addEventListener("resize", displayWindowSize);
-
     //PROGRESSBAR
     // Seleziona tutti gli elementi HTML con la classe CSS "progress"
     document.querySelectorAll(".progress").forEach((item) => {
+        console.log("Test");
         // Ottieni il valore dell'attributo "data-value" dell'elemento corrente
         let value = item.getAttribute("data-value");
         // Trova l'elemento figlio con classe "progress-bar" all'interno dello stesso elemento
