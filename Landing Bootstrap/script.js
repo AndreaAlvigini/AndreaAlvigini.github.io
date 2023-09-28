@@ -32,7 +32,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
             });
         }
     }
-    viewportWidthCustom(576);
+    viewportWidthCustom(520);
 
     //NAVBAR Trasparent move
     function navBarTransition() {

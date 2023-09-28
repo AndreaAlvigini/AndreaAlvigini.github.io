@@ -366,11 +366,23 @@ body {
         padding-top: 50px;
     }
 }
-@media screen and (max-width: 576) {
-    .hamburger{
-        background-color: var(--main-white);
-        color: var(--main-white);
-        
+@media (max-width: 576px) {
+    /* Cambia lo sfondo del navbar a bianco */
+    .navbar {
+        background-color: white !important;
     }
-    
+
+    /* Cambia il colore del testo dei link nel navbar a nero */
+    .navbar-nav .nav-link {
+        color: black !important;
+    }
+
+    /* Cambia il colore dell'icona del toggle a nero */
+    .navbar-toggler-icon {
+        background-color: black !important;
+    }
 }
+
+
+
+
