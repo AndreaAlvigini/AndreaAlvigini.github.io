@@ -5,8 +5,8 @@
     --main-green: #94ae3f;
     --main-blue: #243754;
     --second-black: #101321;
-    --second-white: #A8A8A8;
-    --second-blue: #3A4B65;
+    --second-white: #a8a8a8;
+    --second-blue: #3a4b65;
 }
 
 * {
@@ -15,42 +15,90 @@
 
 body {
     color: var(--main-white);
-    font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(62deg, var(--main-black) 0%, var(--main-blue) 100%);
+    font-family: "Montserrat", sans-serif;
+    background: linear-gradient(62deg,
+            var(--main-black) 0%,
+            var(--main-blue) 100%);
     /* background-color: aliceblue; */
 }
 
-.bg-custom-light{
+.bg-custom-light {
     background-color: var(--main-white);
 }
 
 .bg-custom-primary {
-    background: linear-gradient(62deg, var(--main-black) 0%, var(--main-blue) 100%);
+    background: linear-gradient(62deg,
+            var(--main-black) 0%,
+            var(--main-blue) 100%);
 }
 
 .bg-custom-navbar {
-    background: linear-gradient(62deg, var(--main-blue) 0%, var(--main-black) 50%, var(--main-blue) 100%);
+    background: linear-gradient(62deg,
+            var(--main-blue) 0%,
+            var(--main-black) 50%,
+            var(--main-blue) 100%);
 }
 
 .bg-custom-progress {
     background-color: var(--main-green);
 }
+
 .bg-custom-secondary {
     background-color: var(--main-blue);
 }
-#about, #frontend, #backend, #database, #contacts {
-    padding-top: 80px;
 
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: var(--main-green);
+    color: white;
+    mix-blend-mode: difference;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+#myBtn:hover {
+    background-color: var(--main-blue);
+}
+
+/* NAVBAR */
+
+/* Navbar bianca */
+/* Link con testo bianco inizialmente */
+.navbar .nav-item a {
+    color: var(--main-white);
+    /* Colore del testo bianco */
+}
+
+/* Navbar bianca */
+.navbar.white {
+    background-color: var(--main-white);
+    /* Colore di sfondo bianco desiderato */
+    transition: background-color 0.5s ease-in-out;
+}
+
+.navbar.transparent .nav-item a {
+    color: var(--main-white);
+    /* Colore del testo bianco */
+}
+
+.navbar.transparent .nav-item a:hover {
+    color: var(--second-white);
 }
 
 
-/* NAVBAR */
 .navbar.fixed-top {
     position: fixed;
     width: 100%;
     z-index: 1000;
 }
-
 
 .navbar-nav {
     flex-grow: 1;
@@ -64,18 +112,11 @@ body {
 }
 
 .nav-item a {
-    color: var(--main-blue);
+    color: var(--main-white);
     transition: color;
     font-size: 1.2em;
-    
-    transition: color 0.3s ease-in-out;
+    transition: color 0.2s ease-in-out;
 }
-    .nav-item a:hover {
-        
-        color: var(--second-blue);
-        
-    }
-
 
 /* .navbar-toggler {
     border-color: var(--main-white);
@@ -90,13 +131,15 @@ body {
 
 .fa-bars {
     background-color: var(--main-white);
-    
 }
+
 /*JUMBOTRON*/
 
 .jumbotron {
     height: 40vh;
     text-align: center;
+    margin-top: none;
+    margin-bottom: none;
 }
 
 .display-4 {
@@ -111,6 +154,18 @@ body {
     font-style: oblique;
     font-weight: 300;
     font-size: 2em;
+}
+
+#maintitle {
+    opacity: 0;
+    transform: translateX(50);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#subtitle {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 /* WORKSECTION */
@@ -131,7 +186,6 @@ body {
     align-items: center;
 }
 
-
 .card-title {
     display: flex;
     justify-content: center;
@@ -140,6 +194,7 @@ body {
     font-size: 2rem;
     transition: 0.3s ease-in;
 }
+
 .code {
     color: var(--main-gray);
     transition: color 0.3s ease-out;
@@ -161,30 +216,31 @@ body {
     height: 0;
 }
 
-
 .progress {
-
     height: 4px;
     background-color: var(--main-white);
 }
 
-/* CONTACTS */
-
-.mt-5 {
-    max-width: 400px margin: auto;
+#frontend,
+#backend,
+#database {
+    padding-top: 50px;
 }
+
+
+
+/* CONTACTS */
 
 .fa-envelope {
     font-size: 1em;
 }
-
-
 
 .button-box {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 2em;
+    margin-top: 2em;
 }
 
 .btn-primary {
@@ -192,9 +248,18 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 #contacts {
     padding-bottom: 50px;
+}
 
+.btn-custom {
+    color: var(--main-white);
+    background-color: var(--second-blue);
+}
+
+.contact-text {
+    padding-bottom: 3rem;
 }
 
 /* Media query*/
@@ -203,24 +268,109 @@ body {
     #contacts {
         width: 30em;
         margin: auto;
-        padding-top: 100px;
+        padding-top: 150px
     }
-    #about, #frontend, #backend, #database {
-    padding-top: 100px;
+    #about {
+        padding-top: 150px;
     }
+    
+}
+
+@media screen and (max-width: 767px) {
+    #contacts {
+        margin: auto;
+        padding-bottom: 100px;
+        padding-top: 100px
+    }
+    #about {
+        padding-top: 150px;
+    }
+    
 }
 
 @media screen and (max-width: 400px) {
     .display-4 {
         font-size: 3em;
     }
-
 }
-@media screen and (max-width: 991px) {
-    #contacts {
-        width: 30em;
-        margin: auto;
-        padding-top: 150px;
+
+
+
+
+
+/* Media query per dispositivi con larghezza massima di 320px (ad esempio dispositivi mobili molto stretti) */
+@media screen and (max-width: 576px) {
+    #contacts form {
+        max-width: 100%;
+        /* Larghezza massima del form per adattarsi al contenitore */
+        padding: 10px;
+        /* Spaziatura interna del form */
+    }
+
+    #contacts .form-group {
+        margin-bottom: 10px;
+        /* Spaziatura tra gli elementi del form */
+    }
+
+    #contacts textarea {
+        max-height: 100px;
+        /* Altezza massima per il campo textarea */
+        font-size: 14px;
+        /* Riduci la dimensione del testo nei campi di input */
+        padding: 8px;
+        /* Riduci il padding dei campi di input */
+    }
+
+    #contacts input[type="text"],
+    #contacts input[type="email"] {
+        max-width: 100%;
+        /* Larghezza massima per i campi di input */
+        font-size: 14px;
+        /* Riduci la dimensione del testo nei campi di input */
+        padding: 8px;
+        /* Riduci il padding dei campi di input */
+    }
+
+    #contacts button {
+        max-width: 100%;
+        /* Larghezza massima per il pulsante */
+        font-size: 14px;
+        /* Riduci la dimensione del testo del pulsante */
+        padding: 8px 16px;
+        /* Riduci il padding del pulsante */
+    }
+    
+}
+
+@media screen and (max-width: 860px) {
+    #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 5px;
+        right: 5px;
+        z-index: 99;
+        font-size: 15px;
+        border: none;
+        outline: none;
+        background-color: var(--main-blue);
+        color: white;
+        mix-blend-mode: difference;
+        cursor: pointer;
+        padding: 8px;
+        border-radius: 4px;
+    }
+}
+@media screen and (max-height: 651px) {
+
+    #about {
+        padding-top: 50px;
+    }
+}
+@media screen and (max-width: 576) {
+    .hamburger{
+        background-color: var(--main-white);
+        color: var(--main-white);
         
     }
+    
 }
