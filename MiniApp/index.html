@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>List</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+            crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,700;1,400;1,500;1,700&display=swap"
+            rel="stylesheet">
+
+    </head>
+    <body>
+        <main class="container-sm">
+            <section class="container" id="header">
+                <div class="row">
+                    <div class="col p-3"></div>
+                    <div class="col p-3 d-flex justify-content-center"><h1
+                            class="display-3 fw-medium
+                            ">List</h1></div>
+                    <div class="col p-3"></div>
+                </div>
+            </section>
+
+            <section class="container" id="form">
+                <div class="row">
+                    <div class="col-3"></div>
+                    <div class="col-6 d-flex justify-content-between">
+                        <input type="text" class="form-control"
+                            placeholder="Type here"
+                            aria-label="Recipient's username"
+                            aria-describedby="button-addon2">
+                        <button
+                            class="btn btn-outline-secondary btn-custom-outline-dark "
+                            type="button"
+                            id="add-button">Add</button>
+                    </div>
+                    <div class="col-3"></div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-3"></div>
+                        <div class="col-6 ">
+                            <ul id="list" class="d-flex justify-content-center">
+                                <!-- Gli elementi della lista verranno inseriti qui -->
+                            </ul>
+                        </div>
+                        <div class="col-3"></div>
+                        <button type="button"
+                            class="btn btn-outline-danger btn-custom-outline d-none ms-lg-5"
+                            id="remove">Remove</button>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+        <script src="app.js"></script>
+    </body>
+</html>

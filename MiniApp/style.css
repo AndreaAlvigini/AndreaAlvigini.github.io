@@ -1,0 +1,50 @@
+:root {
+    --yellow:#F8F32B;
+    --secondary-dark: #292F36;
+    --red:#FF6B6B;
+    --green: #4ECDC4;
+    --white: #F5F5F5;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--white);
+}
+h1 {
+    color: var(--secondary-dark);
+    text-shadow: 4px 4px 0px rgba(0,0,0,0.2);
+}
+
+/* Buttons */
+.btn-custom-outline {
+    border-color: var(--red); 
+    color: var(--red); 
+}
+
+.btn-custom-outline:hover {
+    background-color:  var(--red); 
+    color:  var(--white); 
+}
+
+.btn-custom-outline-dark {
+    border-color:  var(--secondary-dark);
+    color:  var(--secondary-dark)
+}
+
+.btn-custom-outline-dark:hover {
+    background-color:  var(--secondary-dark);
+    color:  var(--white); 
+}
+/* Stile per gli elementi della lista */
+#list {
+    list-style: none; /* Rimuove i bullet points predefiniti */
+    padding: 0; /* Rimuove il padding predefinito */
+}
+
+#list li {
+    display: block; /* Imposta la visualizzazione come flex per allineare il testo e il pulsante in modo orizzontale */
+    align-items: center; /* Allinea verticalmente il contenuto */
+    margin-bottom: 10px; /* Aggiunge spazio tra gli elementi */
+    font-size: 16px; /* Aumenta la dimensione del testo */
+
+}
+
