@@ -1,50 +1,185 @@
 :root {
-    --yellow:#F8F32B;
-    --secondary-dark: #292F36;
-    --red:#FF6B6B;
-    --green: #4ECDC4;
-    --white: #F5F5F5;
+    --yellow: #f8f32b;
+    --secondary-dark: #292f36;
+    --red: #ff6b6b;
+    --green: #4ecdc4;
+    --white: #f5f5f5;
+    --gray: #464747;
 }
+
+html {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     background-color: var(--white);
 }
+
 h1 {
     color: var(--secondary-dark);
-    text-shadow: 4px 4px 0px rgba(0,0,0,0.2);
+    text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
 }
+
 
 /* Buttons */
 .btn-custom-outline {
-    border-color: var(--red); 
-    color: var(--red); 
+    border-color: var(--red);
+    color: var(--red);
 }
 
 .btn-custom-outline:hover {
-    background-color:  var(--red); 
-    color:  var(--white); 
+    background-color: var(--red);
+    color: var(--white);
 }
 
 .btn-custom-outline-dark {
-    border-color:  var(--secondary-dark);
-    color:  var(--secondary-dark)
+    border-color: var(--secondary-dark);
+    color: var(--secondary-dark);
 }
 
 .btn-custom-outline-dark:hover {
-    background-color:  var(--secondary-dark);
-    color:  var(--white); 
+    background-color: var(--secondary-dark);
+    color: var(--white);
 }
+
 /* Stile per gli elementi della lista */
 #list {
-    list-style: none; /* Rimuove i bullet points predefiniti */
-    padding: 0; /* Rimuove il padding predefinito */
+    list-style: circle;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    /* Imposta il layout in colonna */
+    align-items: flex-start;
+    /* Allinea il testo a sinistra */
 }
 
+/* Stile per gli elementi <li> */
 #list li {
-    display: block; /* Imposta la visualizzazione come flex per allineare il testo e il pulsante in modo orizzontale */
-    align-items: center; /* Allinea verticalmente il contenuto */
-    margin-bottom: 10px; /* Aggiunge spazio tra gli elementi */
-    font-size: 16px; /* Aumenta la dimensione del testo */
-
+    display: flex;
+    justify-content: space-between;
+    /* Spazio tra il testo e il pulsante */
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 16px;
 }
 
+/* Stile per il testo nell'elemento della lista */
+#list li span {
+    flex: 1;
+    margin-right: 10px;
+    font-size: 2rem;
+    /* Aggiunge spazio tra il testo e il pulsante */
+}
+
+/* Stile per il pulsante "Remove" */
+#list li button.btn-custom-outline {
+    flex-shrink: 0;
+    /* Impedisce al pulsante di restringersi */
+    margin-left: 10px;
+    /* Aggiunge spazio a sinistra del pulsante */
+    padding: 5px 10px;
+    /* Aumenta le dimensioni del pulsante */
+}
+
+.custom-checkbox {
+    width: 20px;
+    /* Larghezza personalizzabile */
+    height: 20px;
+    /* Altezza personalizzabile */
+    border: 1px solid var(--secondary-dark);
+    /* Colore del bordo personalizzabile */
+    background-color: var(--white);
+    /* Colore di sfondo personalizzabile */
+    border-radius: 4px;
+    /* Bordo arrotondato personalizzabile */
+    margin-right: 10px;
+    /* Spazio tra il checkbox e il testo personalizzabile */
+    cursor: pointer;
+    /* Cambia il cursore al passaggio del mouse */
+}
+
+.custom-checkbox:checked {
+    width: 20px;
+    /* Larghezza personalizzabile */
+    height: 20px;
+    /* Altezza personalizzabile */
+    background-color: var(--red);
+    /* Colore di sfondo personalizzabile */
+    border: 1px solid var(--secondary-dark);
+    /* Colore del bordo personalizzabile */
+    border-radius: 4px;
+    /* Bordo arrotondato personalizzabile */
+    margin-right: 10px;
+    /* Spazio tra il checkbox e il testo personalizzabile */
+    cursor: pointer;
+    /* Cambia il cursore al passaggio del mouse */
+    content: "\2713";
+    /* Il simbolo di spunta (v) */
+    color: #28a745;
+}
+
+/* CALCULATOR  */
+
+
+.icon-color {
+    --fa-primary-color: var(--secondary-dark);
+    /* Cambia questo colore al colore desiderato */
+    --fa-secondary-color: var(--gray);
+}
+
+.icon-color:hover {
+    --fa-primary-color: var(--red);
+    /* Cambia questo colore al colore desiderato */
+    --fa-secondary-color: var(--green);
+    cursor: pointer;
+}
+
+.calculator-card {
+    display: flex;
+    justify-content: center;
+}
+
+.calculator {
+    border: 1px solid var(--secondary-dark);
+    border-radius: 5px;
+    width: 400px;
+}
+
+.calculator-screen {
+    width: 100%;
+    height: 80px;
+    border: none;
+    background-color: var(--secondary-dark);
+    color: var(--white);
+    text-align: right;
+    padding-right: 20px;
+    padding-left: 10px;
+    font-size: 4rem;
+}
+
+.button-calculator {
+    height: 60px;
+    font-size: 2rem !important;
+    box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+.button-number {
+    outline: var(--secondary-dark);
+    border: 20px;
+}
+
+.equal-sign {
+    background-color: var(--white);
+    color: var(--secondary-dark);
+    height: 98%;
+    grid-area: 2 / 4 / 6 / 5;
+}
+
+.calculator-keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+    background-color: var(--white);
+}
