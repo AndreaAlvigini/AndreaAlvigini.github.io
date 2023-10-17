@@ -43,5 +43,3 @@ Il CSS personalizzato definisce lo stile della calcolatrice. Ecco alcuni punti c
 - `.calculator-keys`: Stilizza il contenitore dei pulsanti della calcolatrice, definendo colonne e spaziatura.
 
 ---
-
-Puoi utilizzare questo codice Markdown come base per il tuo README.md, personalizzandolo ulteriormente se necessario. Assicurati di includere ulteriori dettagli o sezioni in base alle esigenze del tuo progetto.
